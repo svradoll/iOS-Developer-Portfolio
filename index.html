@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sara Charid — iOS Developer</title>
+<title>Sara Charid — Software & iOS Developer</title>
 
 <style>
 
-/* ================================
-   BASE
-================================ */
+/* =========================
+   GLOBAL
+========================= */
 
 * {
     margin: 0;
@@ -26,19 +26,23 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
                  "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     background: #050505;
-    color: #ffffff;
+    color: #f5f5f7;
     overflow-x: hidden;
 }
 
+a {
+    color: inherit;
+}
+
 ::selection {
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
 }
 
 
-/* ================================
-   NAVIGATION
-================================ */
+/* =========================
+   NAV
+========================= */
 
 nav {
     position: fixed;
@@ -52,9 +56,9 @@ nav {
 
     padding: 20px 6%;
 
-    background: rgba(5,5,5,0.75);
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 
     border-bottom: 1px solid rgba(255,255,255,0.06);
 
@@ -62,42 +66,42 @@ nav {
 }
 
 .logo {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #999;
+    color: #8e8e93;
     text-decoration: none;
     font-size: 13px;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
 .nav-links a:hover {
-    color: white;
+    color: #ffffff;
 }
 
 
-/* ================================
+/* =========================
    HERO
-================================ */
+========================= */
 
 .hero {
     min-height: 100vh;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     text-align: center;
 
-    padding: 140px 25px 80px;
+    padding: 150px 25px 90px;
 
     position: relative;
     overflow: hidden;
@@ -106,10 +110,10 @@ nav {
 .hero-glow {
     position: absolute;
 
-    width: 850px;
-    height: 850px;
+    width: 900px;
+    height: 900px;
 
-    top: 35%;
+    top: 28%;
     left: 50%;
 
     transform: translate(-50%, -50%);
@@ -117,66 +121,78 @@ nav {
     background:
         radial-gradient(
             circle,
-            rgba(74, 90, 255, 0.13),
-            transparent 65%
+            rgba(118, 104, 255, 0.14),
+            rgba(214, 122, 164, 0.05) 35%,
+            transparent 68%
         );
 
     pointer-events: none;
 }
 
 .hero-content {
+    max-width: 1150px;
     position: relative;
     z-index: 2;
-
-    max-width: 1100px;
 }
 
-.hero-label {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 28px;
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: #8e8e93;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: clamp(65px, 10vw, 135px);
-    line-height: 0.9;
-    letter-spacing: -7px;
-    margin-bottom: 35px;
+    font-size: clamp(68px, 10vw, 140px);
+
+    line-height: 0.88;
+
+    letter-spacing: -8px;
+
+    margin-bottom: 38px;
 }
 
-.hero-gradient {
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #777
-    );
+.gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 5%,
+            #a8a8ad 55%,
+            #65656c
+        );
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-description {
-    max-width: 680px;
-    margin: auto;
+    max-width: 730px;
+    margin: 0 auto;
+
+    color: #98989d;
 
     font-size: 20px;
     line-height: 1.65;
-
-    color: #999;
 }
 
 .hero-buttons {
-    margin-top: 42px;
-
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     gap: 12px;
 
-    flex-wrap: wrap;
+    margin-top: 42px;
 }
 
-.button-primary,
-.button-secondary {
+.button {
     display: inline-block;
 
     padding: 15px 25px;
@@ -184,15 +200,16 @@ nav {
     border-radius: 100px;
 
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .button-primary {
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
 }
 
 .button-primary:hover {
@@ -200,59 +217,64 @@ nav {
 }
 
 .button-secondary {
-    background: #111;
-    border: 1px solid #292929;
-    color: white;
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
 .button-secondary:hover {
-    background: #181818;
+    background: rgba(255,255,255,0.10);
 }
 
 
-/* ================================
-   GENERAL SECTIONS
-================================ */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
     padding: 140px 6%;
 }
 
 .section-label {
-    font-size: 12px;
+    margin-bottom: 22px;
 
-    text-transform: uppercase;
+    color: #66666c;
+
+    font-size: 11px;
+    font-weight: 600;
 
     letter-spacing: 2px;
-
-    color: #666;
-
-    margin-bottom: 22px;
+    text-transform: uppercase;
 }
 
 .section-title {
-    font-size: clamp(45px, 7vw, 85px);
-
-    line-height: 1;
-
-    letter-spacing: -4px;
+    max-width: 1000px;
 
     margin-bottom: 75px;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.98;
+
+    letter-spacing: -5px;
 }
 
 
-/* ================================
-   PROJECT CARDS
-================================ */
+/* =========================
+   PROJECTS
+========================= */
 
 .project {
     min-height: 700px;
 
+    padding: 65px;
+
+    margin-bottom: 30px;
+
     border-radius: 42px;
 
-    margin-bottom: 32px;
-
-    padding: 65px;
+    border: 1px solid rgba(255,255,255,0.08);
 
     display: flex;
     flex-direction: column;
@@ -261,8 +283,6 @@ nav {
     position: relative;
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,0.08);
-
     transition:
         transform 0.45s ease,
         border-color 0.45s ease;
@@ -270,64 +290,63 @@ nav {
 
 .project:hover {
     transform: translateY(-7px);
-
-    border-color:
-        rgba(255,255,255,0.17);
+    border-color: rgba(255,255,255,0.17);
 }
-
-
-/* VIAME */
 
 .viame {
     background:
         radial-gradient(
-            circle at 80% 20%,
-            rgba(231, 128, 158, 0.48),
-            transparent 32%
+            circle at 80% 18%,
+            rgba(224, 117, 159, 0.50),
+            transparent 31%
         ),
         radial-gradient(
-            circle at 60% 80%,
-            rgba(109, 76, 255, 0.20),
-            transparent 40%
+            circle at 58% 82%,
+            rgba(110, 75, 255, 0.18),
+            transparent 38%
         ),
         linear-gradient(
             135deg,
-            #24141c,
-            #090909 70%
+            #26151d,
+            #090909 72%
         );
 }
-
-
-/* ERA */
 
 .era {
     background:
         radial-gradient(
-            circle at 80% 20%,
-            rgba(130, 87, 190, 0.55),
-            transparent 32%
+            circle at 82% 20%,
+            rgba(137, 94, 194, 0.53),
+            transparent 31%
+        ),
+        radial-gradient(
+            circle at 55% 85%,
+            rgba(220, 166, 85, 0.12),
+            transparent 40%
         ),
         linear-gradient(
             135deg,
-            #1d1424,
-            #080808 70%
+            #1e1526,
+            #080808 72%
         );
 }
-
-
-/* LUNARA */
 
 .lunara {
     background:
         radial-gradient(
-            circle at 80% 20%,
-            rgba(225, 132, 105, 0.50),
-            transparent 32%
+            circle at 82% 20%,
+            rgba(229, 137, 108, 0.48),
+            transparent 31%
+        ),
+        radial-gradient(
+            circle at 60% 80%,
+            rgba(194, 92, 141, 0.13),
+            transparent 38%
         ),
         linear-gradient(
             135deg,
-            #281812,
-            #080808 70%
+            #291912,
+            #080808 72%
         );
 }
 
@@ -340,7 +359,8 @@ nav {
 .project-number {
     color: rgba(255,255,255,0.55);
 
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 600;
 
     letter-spacing: 1.5px;
 }
@@ -352,33 +372,34 @@ nav {
 
     border: 1px solid rgba(255,255,255,0.15);
 
-    color: #bbb;
+    color: #b9b9bd;
 
-    font-size: 11px;
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
 }
 
 .project-content {
-    max-width: 650px;
+    max-width: 690px;
 }
 
 .project h3 {
-    font-size: clamp(65px, 10vw, 120px);
+    margin-bottom: 26px;
 
-    letter-spacing: -7px;
+    font-size: clamp(70px, 10vw, 125px);
 
-    line-height: 0.9;
+    line-height: 0.86;
 
-    margin-bottom: 25px;
+    letter-spacing: -8px;
 }
 
 .project-description {
-    max-width: 590px;
+    max-width: 620px;
 
-    color: #c4c4c4;
+    color: #c0c0c5;
 
     font-size: 19px;
-
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .tags {
@@ -388,368 +409,444 @@ nav {
 .tag {
     display: inline-block;
 
+    margin: 0 6px 7px 0;
+
     padding: 8px 13px;
+
+    border: 1px solid rgba(255,255,255,0.16);
 
     border-radius: 100px;
 
-    border: 1px solid rgba(255,255,255,0.17);
+    color: #c8c8cc;
 
-    margin-right: 6px;
-    margin-bottom: 7px;
-
-    color: #ccc;
-
-    font-size: 12px;
+    font-size: 11px;
 }
 
-.view-project {
+.project-link {
     display: inline-flex;
-
     align-items: center;
-
-    gap: 8px;
+    gap: 9px;
 
     margin-top: 30px;
 
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 
-    font-size: 15px;
-
+    font-size: 14px;
     font-weight: 600;
 }
 
-.view-project span {
-    transition: transform 0.3s;
+.project-link span {
+    transition: transform 0.3s ease;
 }
 
-.view-project:hover span {
+.project-link:hover span {
     transform: translateX(6px);
 }
 
 
-/* ================================
-   PROJECT DETAIL
-================================ */
+/* =========================
+   CASE STUDIES
+========================= */
 
 .project-detail {
     padding: 150px 6%;
 
-    border-top: 1px solid #171717;
+    border-top: 1px solid #171719;
 
-    scroll-margin-top: 60px;
+    scroll-margin-top: 70px;
 }
 
 .detail-inner {
-    max-width: 1250px;
+    max-width: 1280px;
     margin: auto;
 }
 
 .detail-heading {
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap: 70px;
+    gap: 80px;
 
-    margin-bottom: 90px;
+    margin-bottom: 85px;
 }
 
 .detail-heading h2 {
-    font-size: clamp(60px, 9vw, 120px);
+    font-size: clamp(65px, 9vw, 125px);
 
-    letter-spacing: -7px;
+    line-height: 0.86;
 
-    line-height: 0.9;
+    letter-spacing: -8px;
 }
 
 .detail-intro {
     align-self: end;
 
-    color: #999;
+    color: #99999f;
 
-    font-size: 20px;
-
-    line-height: 1.7;
+    font-size: 19px;
+    line-height: 1.75;
 }
 
 .detail-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 14px;
 }
 
 .detail-card {
-    background: #101010;
-
-    border: 1px solid #1c1c1c;
-
-    border-radius: 26px;
+    min-height: 250px;
 
     padding: 32px;
 
-    min-height: 230px;
+    border: 1px solid #1d1d20;
+
+    border-radius: 26px;
+
+    background: #0e0e10;
 }
 
-.detail-card-number {
-    color: #555;
+.detail-number {
+    margin-bottom: 38px;
+
+    color: #55555b;
 
     font-size: 11px;
-
-    margin-bottom: 35px;
 }
 
 .detail-card h4 {
-    font-size: 18px;
+    margin-bottom: 14px;
 
-    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .detail-card p {
-    color: #888;
+    color: #85858b;
 
     font-size: 15px;
-
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 
-/* ================================
-   APP SHOWCASE
-================================ */
+/* =========================
+   SCREENSHOT AREA
+========================= */
 
-.showcase {
+.screenshot-area {
+    min-height: 600px;
+
     margin-top: 20px;
 
-    min-height: 560px;
+    padding: 60px;
 
     border-radius: 35px;
 
-    display: flex;
+    border: 1px solid #1c1c1f;
 
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #18181b,
+            #090909 70%
+        );
+
+    display: flex;
     justify-content: center;
     align-items: center;
 
     text-align: center;
-
-    padding: 50px;
-
-    border: 1px solid #1c1c1c;
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            #171717,
-            #090909 70%
-        );
 }
 
-.showcase-content {
-    max-width: 520px;
+.screenshot-placeholder {
+    max-width: 550px;
 }
 
-.showcase-label {
-    color: #555;
+.screenshot-placeholder span {
+    display: block;
 
-    font-size: 11px;
+    margin-bottom: 20px;
 
-    text-transform: uppercase;
+    color: #55555b;
+
+    font-size: 10px;
 
     letter-spacing: 2px;
 
-    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.showcase h3 {
-    font-size: 34px;
+.screenshot-placeholder h3 {
+    margin-bottom: 15px;
+
+    font-size: 35px;
 
     letter-spacing: -1.5px;
-
-    margin-bottom: 15px;
 }
 
-.showcase p {
-    color: #777;
+.screenshot-placeholder p {
+    color: #74747a;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
-/* ================================
+/* =========================
    ABOUT
-================================ */
+========================= */
 
 .about {
     padding: 180px 6%;
+
+    border-top: 1px solid #151517;
 }
 
-.about-inner {
-    max-width: 1100px;
+.about-container {
+    max-width: 1200px;
 }
 
-.about h2 {
-    font-size: clamp(50px, 7vw, 90px);
+.about-heading {
+    max-width: 1000px;
 
-    letter-spacing: -5px;
+    margin-bottom: 75px;
 
-    line-height: 1;
+    font-size: clamp(55px, 8vw, 100px);
 
-    margin-bottom: 50px;
+    line-height: 0.95;
+
+    letter-spacing: -6px;
 }
 
-.about-text {
+.about-layout {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 100px;
+}
+
+.about-side {
+    color: #65656b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.about-story {
     max-width: 800px;
+}
 
-    color: #999;
+.about-story p {
+    margin-bottom: 27px;
 
-    font-size: 20px;
+    color: #a0a0a6;
 
-    line-height: 1.75;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.about-story .opening {
+    color: #f2f2f4;
+
+    font-size: 26px;
+    line-height: 1.55;
+
+    letter-spacing: -0.5px;
 }
 
 
-/* ================================
+/* =========================
+   JOURNEY
+========================= */
+
+.journey {
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #1b1b1e;
+}
+
+.journey-item {
+    padding: 35px 30px 35px 0;
+
+    border-right: 1px solid #1b1b1e;
+}
+
+.journey-item:last-child {
+    border-right: none;
+    padding-left: 30px;
+}
+
+.journey-item:nth-child(2) {
+    padding-left: 30px;
+}
+
+.journey-year {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #57575d;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+.journey-item h4 {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+}
+
+.journey-item p {
+    max-width: 320px;
+
+    color: #77777d;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
    SKILLS
-================================ */
+========================= */
 
 .skills {
-    padding: 120px 6% 170px;
+    padding: 130px 6% 180px;
 }
 
 .skills-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 14px;
+    gap: 13px;
 }
 
 .skill {
-    background: #101010;
-
-    border: 1px solid #1d1d1d;
+    padding: 32px;
 
     border-radius: 22px;
 
-    padding: 32px;
+    border: 1px solid #1d1d20;
 
-    font-size: 18px;
+    background: #0e0e10;
 
-    transition: 0.3s;
+    font-size: 17px;
+
+    transition: 0.3s ease;
 }
 
 .skill:hover {
     transform: translateY(-4px);
-
-    background: #151515;
+    background: #141416;
 }
 
 
-/* ================================
+/* =========================
    CONTACT
-================================ */
+========================= */
 
 .contact {
-    min-height: 75vh;
+    min-height: 80vh;
+
+    padding: 130px 6%;
 
     display: flex;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     text-align: center;
 
-    padding: 120px 6%;
+    border-top: 1px solid #151517;
 }
 
 .contact-inner {
-    max-width: 950px;
+    max-width: 1000px;
 }
 
 .contact h2 {
-    font-size: clamp(55px, 9vw, 115px);
+    font-size: clamp(60px, 9vw, 125px);
 
-    line-height: 0.9;
+    line-height: 0.88;
 
-    letter-spacing: -7px;
+    letter-spacing: -8px;
 }
 
 .contact p {
-    max-width: 620px;
+    max-width: 650px;
 
-    margin: 30px auto 40px;
+    margin: 32px auto 42px;
 
-    color: #888;
+    color: #88888e;
 
     font-size: 18px;
-
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 .contact-links {
     display: flex;
-
     justify-content: center;
-
-    gap: 12px;
-
     flex-wrap: wrap;
+
+    gap: 11px;
 }
 
 .contact-links a {
-    color: white;
+    padding: 14px 23px;
 
-    text-decoration: none;
-
-    padding: 13px 22px;
+    border: 1px solid #29292d;
 
     border-radius: 100px;
 
-    border: 1px solid #292929;
+    color: #ffffff;
 
-    transition: 0.3s;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
 }
 
 .contact-links a:hover {
-    background: white;
-
-    color: black;
+    background: #ffffff;
+    color: #000000;
 }
 
 
-/* ================================
+/* =========================
    FOOTER
-================================ */
+========================= */
 
 footer {
-    display: flex;
-
-    justify-content: space-between;
-
     padding: 35px 6%;
 
-    color: #555;
+    display: flex;
+    justify-content: space-between;
 
-    font-size: 12px;
+    border-top: 1px solid #151517;
 
-    border-top: 1px solid #151515;
+    color: #55555b;
+
+    font-size: 11px;
 }
 
 
-/* ================================
-   ANIMATIONS
-================================ */
+/* =========================
+   REVEAL ANIMATION
+========================= */
 
 .reveal {
     opacity: 0;
-
-    transform: translateY(40px);
+    transform: translateY(35px);
 
     transition:
         opacity 0.8s ease,
@@ -758,30 +855,28 @@ footer {
 
 .reveal.visible {
     opacity: 1;
-
     transform: translateY(0);
 }
 
 
-/* ================================
+/* =========================
    MOBILE
-================================ */
+========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
     nav {
         padding: 18px 5%;
     }
 
     .nav-links {
-        gap: 15px;
+        gap: 16px;
     }
 
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .hero h1 {
+    .hero h1,
+    .project h3,
+    .detail-heading h2,
+    .contact h2 {
         letter-spacing: -4px;
     }
 
@@ -790,25 +885,35 @@ footer {
     }
 
     .project {
-        min-height: 590px;
-
+        min-height: 600px;
         padding: 35px;
-
-        border-radius: 28px;
-    }
-
-    .project h3 {
-        letter-spacing: -4px;
+        border-radius: 30px;
     }
 
     .detail-heading {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
     .detail-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .journey {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-item,
+    .journey-item:nth-child(2),
+    .journey-item:last-child {
+        padding: 30px 0;
+        border-right: none;
+        border-bottom: 1px solid #1b1b1e;
     }
 
     .skills-grid {
@@ -817,24 +922,43 @@ footer {
 
     footer {
         flex-direction: column;
-
         gap: 10px;
     }
+
 }
 
-@media (max-width: 550px) {
+@media (max-width: 560px) {
 
     .nav-links a:nth-child(2),
     .nav-links a:nth-child(3) {
         display: none;
     }
 
-    .hero-description {
+    .hero-description,
+    .project-description {
         font-size: 17px;
     }
 
-    .project-description {
-        font-size: 17px;
+    .screenshot-area {
+        padding: 35px 25px;
+        min-height: 450px;
+    }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 
 }
@@ -846,7 +970,9 @@ footer {
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -856,28 +982,22 @@ footer {
 
     <div class="nav-links">
 
-        <a href="#work">
-            Work
-        </a>
+        <a href="#work">Work</a>
 
-        <a href="#about">
-            About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#skills">
-            Skills
-        </a>
+        <a href="#skills">Skills</a>
 
-        <a href="#contact">
-            Contact
-        </a>
+        <a href="#contact">Contact</a>
 
     </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -885,43 +1005,47 @@ footer {
 
     <div class="hero-content">
 
-        <div class="hero-label">
-            iOS Developer • London
+        <div class="eyebrow">
+            Aspiring Software & iOS Developer • London
         </div>
 
         <h1>
-            I build for
+
+            Ideas into
+
             <br>
 
-            <span class="hero-gradient">
-                iPhone.
+            <span class="gradient-text">
+                experiences.
             </span>
+
         </h1>
 
         <p class="hero-description">
 
-            I'm Sara, an aspiring iOS developer turning ideas
-            into thoughtful digital experiences using Swift,
-            SwiftUI and a growing understanding of product
-            design.
+            I'm Sara, a developer with a background in mental
+            health nursing and a long-standing curiosity for
+            technology. I'm now turning that curiosity into
+            products — designing, coding and building
+            experiences across iOS and the web.
 
         </p>
 
         <div class="hero-buttons">
 
             <a
-                href="#work"
-                class="button-primary">
+                class="button button-primary"
+                href="#work">
 
                 Explore my work ↓
 
             </a>
 
             <a
-                href="#about"
-                class="button-secondary">
+                class="button button-secondary"
+                href="#about">
 
-                About me
+                My story
 
             </a>
 
@@ -932,7 +1056,9 @@ footer {
 </section>
 
 
-<!-- WORK -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section
     class="section"
@@ -943,7 +1069,9 @@ footer {
     </div>
 
     <h2 class="section-title reveal">
-        Ideas I've brought to life.
+
+        Learning by building.
+
     </h2>
 
 
@@ -953,13 +1081,13 @@ footer {
 
         <div class="project-top">
 
-            <div class="project-number">
+            <span class="project-number">
                 01 / SOCIAL
-            </div>
+            </span>
 
-            <div class="project-status">
+            <span class="project-status">
                 IN DEVELOPMENT
-            </div>
+            </span>
 
         </div>
 
@@ -971,39 +1099,30 @@ footer {
 
             <p class="project-description">
 
-                A social media experience focused on personal
-                expression, connection and giving users more
-                control over how their profile feels.
+                A social media app focused on expression,
+                connection and giving people more control
+                over how their digital identity looks and
+                feels.
 
             </p>
 
             <div class="tags">
 
-                <span class="tag">
-                    iOS
-                </span>
+                <span class="tag">iOS</span>
 
-                <span class="tag">
-                    SwiftUI
-                </span>
+                <span class="tag">SwiftUI</span>
 
-                <span class="tag">
-                    UI / UX
-                </span>
+                <span class="tag">Social</span>
 
-                <span class="tag">
-                    Social
-                </span>
+                <span class="tag">UI / UX</span>
 
             </div>
 
             <a
-                class="view-project"
+                class="project-link"
                 href="#viame-project">
 
-                Explore VIAME
-
-                <span>→</span>
+                Explore project <span>→</span>
 
             </a>
 
@@ -1018,13 +1137,13 @@ footer {
 
         <div class="project-top">
 
-            <div class="project-number">
+            <span class="project-number">
                 02 / PHOTOGRAPHY
-            </div>
+            </span>
 
-            <div class="project-status">
+            <span class="project-status">
                 iOS PROJECT
-            </div>
+            </span>
 
         </div>
 
@@ -1036,39 +1155,29 @@ footer {
 
             <p class="project-description">
 
-                A native iOS photography app that lets users
-                transform their photos using visual treatments
-                inspired by different eras.
+                A native iOS photography app exploring
+                era-inspired filters and the way software
+                can transform the character of a photograph.
 
             </p>
 
             <div class="tags">
 
-                <span class="tag">
-                    Swift
-                </span>
+                <span class="tag">Swift</span>
 
-                <span class="tag">
-                    SwiftUI
-                </span>
+                <span class="tag">SwiftUI</span>
 
-                <span class="tag">
-                    Core Image
-                </span>
+                <span class="tag">Core Image</span>
 
-                <span class="tag">
-                    PhotosUI
-                </span>
+                <span class="tag">PhotosUI</span>
 
             </div>
 
             <a
-                class="view-project"
+                class="project-link"
                 href="#era-project">
 
-                Explore ERA
-
-                <span>→</span>
+                Explore project <span>→</span>
 
             </a>
 
@@ -1083,13 +1192,13 @@ footer {
 
         <div class="project-top">
 
-            <div class="project-number">
+            <span class="project-number">
                 03 / MUSIC
-            </div>
+            </span>
 
-            <div class="project-status">
+            <span class="project-status">
                 PRODUCT CONCEPT
-            </div>
+            </span>
 
         </div>
 
@@ -1101,40 +1210,29 @@ footer {
 
             <p class="project-description">
 
-                A social music discovery concept where people
-                discover music through the playlists and
-                listening habits of other users and public
-                figures.
+                A social music discovery concept exploring
+                how people can discover music through the
+                playlists and listening habits of others.
 
             </p>
 
             <div class="tags">
 
-                <span class="tag">
-                    Product Design
-                </span>
+                <span class="tag">Product Design</span>
 
-                <span class="tag">
-                    UI / UX
-                </span>
+                <span class="tag">UI / UX</span>
 
-                <span class="tag">
-                    JavaScript
-                </span>
+                <span class="tag">JavaScript</span>
 
-                <span class="tag">
-                    Prototype
-                </span>
+                <span class="tag">Prototype</span>
 
             </div>
 
             <a
-                class="view-project"
+                class="project-link"
                 href="#lunara-project">
 
-                Explore LUNARA
-
-                <span>→</span>
+                Explore project <span>→</span>
 
             </a>
 
@@ -1145,7 +1243,9 @@ footer {
 </section>
 
 
-<!-- VIAME DETAIL -->
+<!-- =========================
+     VIAME CASE STUDY
+========================= -->
 
 <section
     class="project-detail"
@@ -1165,78 +1265,64 @@ footer {
 
             <p class="detail-intro reveal">
 
-                VIAME is my social media app concept built
-                around expression and customisation. I'm
-                exploring how a social platform can feel more
-                personal while keeping interaction simple
+                VIAME is a social media project centred
+                around personal expression. I'm exploring
+                how profiles can feel more individual while
+                still making social interaction intuitive
                 and familiar.
 
             </p>
 
         </div>
 
-
         <div class="detail-grid">
 
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    01
-                </div>
+                <div class="detail-number">01</div>
 
-                <h4>
-                    The Idea
-                </h4>
+                <h4>The idea</h4>
 
                 <p>
 
-                    Build a social space where users can create
-                    profiles, connect with people and express
-                    themselves beyond a standard social feed.
+                    Create a social experience where users
+                    can connect, post and express themselves
+                    while having more control over the
+                    personality of their profile.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    02
-                </div>
+                <div class="detail-number">02</div>
 
-                <h4>
-                    The Experience
-                </h4>
+                <h4>The experience</h4>
 
                 <p>
 
-                    VIAME explores profile customisation,
-                    personal themes, profile and header
-                    photography, moods, posts and social
-                    activity.
+                    The project explores social profiles,
+                    mini-blog posts, moods, activity,
+                    custom themes and personalised profile
+                    and header imagery.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    03
-                </div>
+                <div class="detail-number">03</div>
 
-                <h4>
-                    What I'm Building
-                </h4>
+                <h4>What I'm learning</h4>
 
                 <p>
 
-                    I'm continually improving the user
-                    experience, interactions and visual
-                    identity while learning how to structure
-                    a larger application.
+                    VIAME is teaching me how to think beyond
+                    individual screens and consider how
+                    features, navigation and interactions
+                    work together across a larger product.
 
                 </p>
 
@@ -1245,23 +1331,24 @@ footer {
         </div>
 
 
-        <div class="showcase reveal">
+        <div class="screenshot-area reveal">
 
-            <div class="showcase-content">
+            <div class="screenshot-placeholder">
 
-                <div class="showcase-label">
-                    Coming next
-                </div>
+                <span>
+                    App showcase
+                </span>
 
                 <h3>
-                    VIAME App Preview
+                    VIAME screenshots coming next.
                 </h3>
 
                 <p>
 
-                    Your real VIAME screenshots will go here,
-                    displayed inside polished iPhone-style
-                    previews.
+                    This area is ready for real screenshots
+                    from the app. They will be presented as
+                    a polished visual showcase rather than a
+                    simple image gallery.
 
                 </p>
 
@@ -1274,7 +1361,9 @@ footer {
 </section>
 
 
-<!-- ERA DETAIL -->
+<!-- =========================
+     ERA CASE STUDY
+========================= -->
 
 <section
     class="project-detail"
@@ -1295,74 +1384,61 @@ footer {
             <p class="detail-intro reveal">
 
                 ERA is a native iOS photography project
-                exploring how software can recreate the
-                visual feeling of different periods in time.
+                exploring how modern photographs can be
+                transformed through visual treatments
+                inspired by different periods.
 
             </p>
 
         </div>
 
-
         <div class="detail-grid">
 
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    01
-                </div>
+                <div class="detail-number">01</div>
 
-                <h4>
-                    Photography
-                </h4>
+                <h4>The idea</h4>
 
                 <p>
 
-                    Users choose a photograph and select an era
-                    to explore different visual treatments and
-                    photographic styles.
+                    Give users a simple way to select a
+                    photograph, choose an era and experiment
+                    with a different visual identity for
+                    their image.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    02
-                </div>
+                <div class="detail-number">02</div>
 
-                <h4>
-                    Native iOS
-                </h4>
+                <h4>Native development</h4>
 
                 <p>
 
-                    ERA is helping me develop practical
-                    experience with SwiftUI, PhotosUI,
-                    Core Image and native iOS interfaces.
+                    Building ERA has allowed me to gain
+                    practical experience with Swift,
+                    SwiftUI, PhotosUI and Core Image.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    03
-                </div>
+                <div class="detail-number">03</div>
 
-                <h4>
-                    Experimentation
-                </h4>
+                <h4>Experimentation</h4>
 
                 <p>
 
-                    I'm experimenting with filters, grain,
-                    overlays and image-processing techniques
-                    to create more convincing photographic
-                    effects.
+                    I'm exploring image filters, grain,
+                    overlays and processing techniques to
+                    understand how different effects can be
+                    combined into a convincing visual style.
 
                 </p>
 
@@ -1371,23 +1447,23 @@ footer {
         </div>
 
 
-        <div class="showcase reveal">
+        <div class="screenshot-area reveal">
 
-            <div class="showcase-content">
+            <div class="screenshot-placeholder">
 
-                <div class="showcase-label">
-                    Coming next
-                </div>
+                <span>
+                    App showcase
+                </span>
 
                 <h3>
-                    ERA App Preview
+                    ERA screenshots coming next.
                 </h3>
 
                 <p>
 
-                    We'll place screenshots of the real ERA
-                    interface here so visitors can actually
-                    see your SwiftUI work.
+                    We'll use this space to show the actual
+                    interface, filter selection and photo
+                    editing experience.
 
                 </p>
 
@@ -1400,7 +1476,9 @@ footer {
 </section>
 
 
-<!-- LUNARA DETAIL -->
+<!-- =========================
+     LUNARA CASE STUDY
+========================= -->
 
 <section
     class="project-detail"
@@ -1420,75 +1498,62 @@ footer {
 
             <p class="detail-intro reveal">
 
-                LUNARA explores music discovery through
-                people. Instead of relying entirely on
-                algorithms, users can explore playlists
-                created by people whose taste interests them.
+                LUNARA explores a more human approach to
+                music discovery — discovering what to listen
+                to through people, personalities and
+                playlists.
 
             </p>
 
         </div>
 
-
         <div class="detail-grid">
 
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    01
-                </div>
+                <div class="detail-number">01</div>
 
-                <h4>
-                    Personal Profiles
-                </h4>
+                <h4>The idea</h4>
 
                 <p>
 
-                    Users have their own profiles and can
-                    create personal playlists for other
-                    people to discover.
+                    Users can create profiles and personal
+                    playlists that other people can explore,
+                    creating another way to discover music.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    02
-                </div>
+                <div class="detail-number">02</div>
 
-                <h4>
-                    Public Figures
-                </h4>
+                <h4>Social discovery</h4>
 
                 <p>
 
-                    Public figures can create verified
-                    accounts and share the music and
-                    playlists they personally listen to.
+                    The concept includes verified public
+                    profiles, allowing users to explore
+                    playlists and music shared by public
+                    figures they follow.
 
                 </p>
 
             </div>
 
-
             <div class="detail-card reveal">
 
-                <div class="detail-card-number">
-                    03
-                </div>
+                <div class="detail-number">03</div>
 
-                <h4>
-                    Product Thinking
-                </h4>
+                <h4>Product thinking</h4>
 
                 <p>
 
-                    LUNARA lets me explore product strategy,
-                    interface design, prototyping and how a
-                    larger consumer application might work.
+                    LUNARA has allowed me to explore
+                    prototyping, interface design and the
+                    broader thinking involved in turning an
+                    initial concept into a digital product.
 
                 </p>
 
@@ -1497,22 +1562,23 @@ footer {
         </div>
 
 
-        <div class="showcase reveal">
+        <div class="screenshot-area reveal">
 
-            <div class="showcase-content">
+            <div class="screenshot-placeholder">
 
-                <div class="showcase-label">
-                    Coming next
-                </div>
+                <span>
+                    Product showcase
+                </span>
 
                 <h3>
-                    LUNARA Preview
+                    LUNARA visuals coming next.
                 </h3>
 
                 <p>
 
-                    We'll add your existing LUNARA interface
-                    and prototype imagery here.
+                    This section will showcase the existing
+                    LUNARA interface and demonstrate the
+                    product concept visually.
 
                 </p>
 
@@ -1525,55 +1591,223 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section
     class="about"
     id="about">
 
-    <div class="about-inner">
+    <div class="about-container">
 
         <div class="section-label reveal">
-            About Me
+            My Story
         </div>
 
-        <h2 class="reveal">
+        <h2 class="about-heading reveal">
 
-            A different route
+            A long-standing curiosity,
             <br>
-            into technology.
+            now a career.
 
         </h2>
 
-        <p class="about-text reveal">
 
-            My professional background is in mental health
-            nursing, where I've developed strong skills in
-            communication, decision-making, problem-solving
-            and understanding people's needs.
+        <div class="about-layout">
 
-            <br><br>
+            <div class="about-side reveal">
 
-            I'm now bringing that human-centred perspective
-            into software development, teaching myself how
-            to design and build applications while developing
-            my skills in Swift, SwiftUI and iOS development.
+                FROM HEALTHCARE
+                <br>
+                TO TECHNOLOGY
+                <br><br>
 
-            <br><br>
+                LONDON, UK
 
-            What interests me most is the entire journey from
-            an idea to a working product — thinking about the
-            user, designing the experience, writing the code,
-            finding what doesn't work and improving it.
+            </div>
 
-        </p>
+
+            <div class="about-story">
+
+                <p class="opening reveal">
+
+                    My route into software development
+                    hasn't been conventional — but my
+                    interest in technology started long
+                    before my career did.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    I began my professional career in mental
+                    health nursing, a field that taught me
+                    how to communicate with people from all
+                    walks of life, solve complex problems,
+                    remain calm under pressure and make
+                    thoughtful decisions when they matter.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    Technology, however, has always been
+                    something I've naturally gravitated
+                    towards. Growing up, I was curious about
+                    how the technology around me actually
+                    worked. I taught myself enough code to
+                    customise my Tumblr pages, experimented
+                    with modifying my PSP and spent hours
+                    installing and exploring mods for
+                    The Sims.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    At the time, I didn't think of those
+                    things as the beginning of a career in
+                    software. I simply enjoyed figuring
+                    things out, changing how things worked
+                    and seeing what I could create.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    As I progressed through my career, I
+                    began to realise that the direction I
+                    wanted for my future had changed. I
+                    found myself returning to something
+                    that had been present throughout my
+                    life — technology, creativity and the
+                    satisfaction of taking an idea and
+                    figuring out how to make it work.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    That realisation led me to begin
+                    teaching myself software development.
+                    Today I'm developing my skills in
+                    Swift, SwiftUI, Xcode and web
+                    technologies while building my own
+                    projects including VIAME, ERA and
+                    LUNARA.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    I'm still at the beginning of that
+                    journey, and every project gives me
+                    another opportunity to solve a problem
+                    I haven't encountered before,
+                    understand the technology more deeply
+                    and become a better developer.
+
+                </p>
+
+
+                <p class="reveal">
+
+                    My background has shaped the way I
+                    approach technology. I bring the
+                    curiosity that originally drew me to
+                    coding together with the empathy,
+                    resilience and human understanding I've
+                    developed throughout my professional
+                    career.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey reveal">
+
+            <div class="journey-item">
+
+                <span class="journey-year">
+                    THE FOUNDATION
+                </span>
+
+                <h4>
+                    Mental Health Nursing
+                </h4>
+
+                <p>
+
+                    Developing communication,
+                    decision-making, resilience and
+                    human-centred problem-solving.
+
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <span class="journey-year">
+                    THE TRANSITION
+                </span>
+
+                <h4>
+                    Learning to Build
+                </h4>
+
+                <p>
+
+                    Returning to a long-standing interest in
+                    technology and teaching myself software
+                    development.
+
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <span class="journey-year">
+                    NOW
+                </span>
+
+                <h4>
+                    Creating Products
+                </h4>
+
+                <p>
+
+                    Building real projects, developing my
+                    technical skills and working towards a
+                    career in software engineering.
+
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section
     class="skills"
@@ -1584,7 +1818,11 @@ footer {
     </div>
 
     <h2 class="section-title reveal">
-        What I'm working with.
+
+        What I'm learning
+        <br>
+        and building with.
+
     </h2>
 
 
@@ -1631,7 +1869,9 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section
     class="contact"
@@ -1640,21 +1880,23 @@ footer {
     <div class="contact-inner">
 
         <div class="section-label reveal">
-            Get in touch
+            What's Next?
         </div>
 
         <h2 class="reveal">
 
-            Let's build
+            Let's create
+            <br>
             something.
 
         </h2>
 
         <p class="reveal">
 
-            I'm building my experience in iOS development
-            and exploring opportunities where I can continue
-            learning, creating and growing as a developer.
+            I'm continuing to develop my skills, build
+            products and explore opportunities where I can
+            learn from experienced developers and grow
+            within software engineering.
 
         </p>
 
@@ -1662,22 +1904,29 @@ footer {
 
             <a
                 href="https://github.com/svradoll"
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer">
 
-                GitHub
+                GitHub ↗
 
             </a>
 
-            <!-- We will replace this with your real LinkedIn -->
+
+            <!-- LinkedIn link will be added next -->
 
             <a href="#">
-                LinkedIn
+
+                LinkedIn ↗
+
             </a>
 
-            <!-- We will replace this with your preferred email -->
+
+            <!-- Email address will be added next -->
 
             <a href="mailto:YOUR-EMAIL">
-                Email
+
+                Email ↗
+
             </a>
 
         </div>
@@ -1687,7 +1936,9 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1704,94 +1955,107 @@ footer {
 
 <script>
 
-/* ================================
-   REVEAL ON SCROLL
-================================ */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
 
-function revealOnScroll() {
+const observer =
+    new IntersectionObserver(
 
-    const windowHeight =
-        window.innerHeight;
+        function(entries) {
 
+            entries.forEach(
+                function(entry) {
 
-    revealElements.forEach(function(element) {
+                    if (entry.isIntersecting) {
 
-        const elementTop =
-            element.getBoundingClientRect().top;
+                        entry.target
+                            .classList
+                            .add("visible");
 
+                    }
 
-        if (elementTop < windowHeight - 80) {
+                }
+            );
 
-            element.classList.add("visible");
+        },
 
+        {
+            threshold: 0.10
         }
 
-    });
-
-}
+    );
 
 
-window.addEventListener(
-    "scroll",
-    revealOnScroll
+revealElements.forEach(
+    function(element) {
+
+        observer.observe(element);
+
+    }
 );
 
 
-revealOnScroll();
-
-
-/* ================================
+/* =========================
    SMOOTH INTERNAL LINKS
-================================ */
+========================= */
 
 document
     .querySelectorAll('a[href^="#"]')
-    .forEach(function(link) {
+    .forEach(
 
-        link.addEventListener(
-            "click",
-            function(event) {
+        function(link) {
 
-                const destination =
-                    this.getAttribute("href");
+            link.addEventListener(
+                "click",
+
+                function(event) {
+
+                    const destination =
+                        this.getAttribute("href");
 
 
-                if (
-                    destination === "#" ||
-                    destination.length < 2
-                ) {
+                    if (
+                        !destination ||
+                        destination === "#"
+                    ) {
 
-                    return;
+                        return;
+
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            destination
+                        );
+
+
+                    if (target) {
+
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+
+                            behavior: "smooth",
+
+                            block: "start"
+
+                        });
+
+                    }
 
                 }
 
+            );
 
-                const target =
-                    document.querySelector(destination);
+        }
 
-
-                if (target) {
-
-                    event.preventDefault();
-
-                    target.scrollIntoView({
-
-                        behavior: "smooth",
-
-                        block: "start"
-
-                    });
-
-                }
-
-            }
-        );
-
-    });
+    );
 
 </script>
 
