@@ -3,2061 +3,1423 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sara Charid — Software & iOS Developer</title>
-
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-                 "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-    background: #050505;
-    color: #f5f5f7;
-    overflow-x: hidden;
+font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+"SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+background: #050505;
+color: #f5f5f7;
+overflow-x: hidden;
 }
-
 a {
-    color: inherit;
+color: inherit;
 }
-
 ::selection {
-    background: #ffffff;
-    color: #000000;
+background: #ffffff;
+color: #000000;
 }
-
-
-/* =========================
-   NAV
-========================= */
-
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 6%;
-
-    background: rgba(5, 5, 5, 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-
-    z-index: 1000;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 6%;
+background: rgba(5, 5, 5, 0.75);
+backdrop-filter: blur(24px);
+-webkit-backdrop-filter: blur(24px);
+border-bottom: 1px solid rgba(255,255,255,0.06);
+z-index: 1000;
 }
-
 .logo {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 1.2px;
 }
-
 .nav-links {
-    display: flex;
-    gap: 30px;
+display: flex;
+gap: 30px;
 }
-
 .nav-links a {
-    color: #8e8e93;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.25s ease;
+color: #8e8e93;
+text-decoration: none;
+font-size: 13px;
+transition: 0.25s ease;
 }
-
 .nav-links a:hover {
-    color: #ffffff;
+color: #ffffff;
 }
-
-
-/* =========================
-   HERO
-========================= */
-
 .hero {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 150px 25px 90px;
-
-    position: relative;
-    overflow: hidden;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 150px 25px 90px;
+position: relative;
+overflow: hidden;
 }
-
 .hero-glow {
-    position: absolute;
-
-    width: 900px;
-    height: 900px;
-
-    top: 28%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(118, 104, 255, 0.14),
-            rgba(214, 122, 164, 0.05) 35%,
-            transparent 68%
-        );
-
-    pointer-events: none;
+position: absolute;
+width: 900px;
+height: 900px;
+top: 28%;
+left: 50%;
+transform: translate(-50%, -50%);
+background:
+radial-gradient(
+circle,
+rgba(118, 104, 255, 0.14),
+rgba(214, 122, 164, 0.05) 35%,
+transparent 68%
+);
+pointer-events: none;
 }
-
 .hero-content {
-    max-width: 1150px;
-    position: relative;
-    z-index: 2;
+max-width: 1150px;
+position: relative;
+z-index: 2;
 }
-
 .eyebrow {
-    display: inline-block;
-
-    margin-bottom: 30px;
-
-    color: #8e8e93;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
+display: inline-block;
+margin-bottom: 30px;
+color: #8e8e93;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
-
 .hero h1 {
-    font-size: clamp(68px, 10vw, 140px);
-
-    line-height: 0.88;
-
-    letter-spacing: -8px;
-
-    margin-bottom: 38px;
+font-size: clamp(68px, 10vw, 140px);
+line-height: 0.88;
+letter-spacing: -8px;
+margin-bottom: 38px;
 }
-
 .gradient-text {
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff 5%,
-            #a8a8ad 55%,
-            #65656c
-        );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+background:
+linear-gradient(
+90deg,
+#ffffff 5%,
+#a8a8ad 55%,
+#65656c
+);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
-
 .hero-description {
-    max-width: 730px;
-    margin: 0 auto;
-
-    color: #98989d;
-
-    font-size: 20px;
-    line-height: 1.65;
+max-width: 730px;
+margin: 0 auto;
+color: #98989d;
+font-size: 20px;
+line-height: 1.65;
 }
-
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 42px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 42px;
 }
-
 .button {
-    display: inline-block;
-
-    padding: 15px 25px;
-
-    border-radius: 100px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: 0.3s ease;
+display: inline-block;
+padding: 15px 25px;
+border-radius: 100px;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
+transition: 0.3s ease;
 }
-
 .button-primary {
-    background: #ffffff;
-    color: #000000;
+background: #ffffff;
+color: #000000;
 }
-
 .button-primary:hover {
-    transform: scale(1.05);
+transform: scale(1.05);
 }
-
 .button-secondary {
-    background: rgba(255,255,255,0.05);
-    color: #ffffff;
-
-    border: 1px solid rgba(255,255,255,0.12);
+background: rgba(255,255,255,0.05);
+color: #ffffff;
+border: 1px solid rgba(255,255,255,0.12);
 }
-
 .button-secondary:hover {
-    background: rgba(255,255,255,0.10);
+background: rgba(255,255,255,0.10);
 }
-
-
-/* =========================
-   SECTIONS
-========================= */
-
 .section {
-    padding: 140px 6%;
+padding: 140px 6%;
 }
-
 .section-label {
-    margin-bottom: 22px;
-
-    color: #66666c;
-
-    font-size: 11px;
-    font-weight: 600;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
+margin-bottom: 22px;
+color: #66666c;
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
-
 .section-title {
-    max-width: 1000px;
-
-    margin-bottom: 75px;
-
-    font-size: clamp(48px, 7vw, 88px);
-
-    line-height: 0.98;
-
-    letter-spacing: -5px;
+max-width: 1000px;
+margin-bottom: 75px;
+font-size: clamp(48px, 7vw, 88px);
+line-height: 0.98;
+letter-spacing: -5px;
 }
-
-
-/* =========================
-   PROJECTS
-========================= */
-
 .project {
-    min-height: 700px;
-
-    padding: 65px;
-
-    margin-bottom: 30px;
-
-    border-radius: 42px;
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    position: relative;
-    overflow: hidden;
-
-    transition:
-        transform 0.45s ease,
-        border-color 0.45s ease;
+min-height: 700px;
+padding: 65px;
+margin-bottom: 30px;
+border-radius: 42px;
+border: 1px solid rgba(255,255,255,0.08);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+position: relative;
+overflow: hidden;
+transition:
+transform 0.45s ease,
+border-color 0.45s ease;
 }
-
 .project:hover {
-    transform: translateY(-7px);
-    border-color: rgba(255,255,255,0.17);
+transform: translateY(-7px);
+border-color: rgba(255,255,255,0.17);
 }
-
 .viame {
-    background:
-        radial-gradient(
-            circle at 80% 18%,
-            rgba(224, 117, 159, 0.50),
-            transparent 31%
-        ),
-        radial-gradient(
-            circle at 58% 82%,
-            rgba(110, 75, 255, 0.18),
-            transparent 38%
-        ),
-        linear-gradient(
-            135deg,
-            #26151d,
-            #090909 72%
-        );
+background:
+radial-gradient(
+circle at 80% 18%,
+rgba(224, 117, 159, 0.50),
+transparent 31%
+),
+radial-gradient(
+circle at 58% 82%,
+rgba(110, 75, 255, 0.18),
+transparent 38%
+),
+linear-gradient(
+135deg,
+#26151d,
+#090909 72%
+);
 }
-
 .era {
-    background:
-        radial-gradient(
-            circle at 82% 20%,
-            rgba(137, 94, 194, 0.53),
-            transparent 31%
-        ),
-        radial-gradient(
-            circle at 55% 85%,
-            rgba(220, 166, 85, 0.12),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #1e1526,
-            #080808 72%
-        );
+background:
+radial-gradient(
+circle at 82% 20%,
+rgba(137, 94, 194, 0.53),
+transparent 31%
+),
+radial-gradient(
+circle at 55% 85%,
+rgba(220, 166, 85, 0.12),
+transparent 38%
+),
+linear-gradient(
+135deg,
+#1e1526,
+#080808 72%
+);
 }
-
 .lunara {
-    background:
-        radial-gradient(
-            circle at 82% 20%,
-            rgba(229, 137, 108, 0.48),
-            transparent 31%
-        ),
-        radial-gradient(
-            circle at 60% 80%,
-            rgba(194, 92, 141, 0.13),
-            transparent 38%
-        ),
-        linear-gradient(
-            135deg,
-            #291912,
-            #080808 72%
-        );
+background:
+radial-gradient(
+circle at 82% 20%,
+rgba(229, 137, 108, 0.48),
+transparent 31%
+),
+radial-gradient(
+circle at 60% 80%,
+rgba(194, 92, 141, 0.13),
+transparent 38%
+),
+linear-gradient(
+135deg,
+#291912,
+#080808 72%
+);
 }
-
 .project-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
-
 .project-number {
-    color: rgba(255,255,255,0.55);
-
-    font-size: 11px;
-    font-weight: 600;
-
-    letter-spacing: 1.5px;
+color: rgba(255,255,255,0.55);
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1.5px;
 }
-
 .project-status {
-    padding: 8px 12px;
-
-    border-radius: 100px;
-
-    border: 1px solid rgba(255,255,255,0.15);
-
-    color: #b9b9bd;
-
-    font-size: 10px;
-
-    letter-spacing: 0.5px;
+padding: 8px 12px;
+border-radius: 100px;
+border: 1px solid rgba(255,255,255,0.15);
+color: #b9b9bd;
+font-size: 10px;
+letter-spacing: 0.5px;
 }
-
 .project-content {
-    max-width: 690px;
+max-width: 690px;
 }
-
 .project h3 {
-    margin-bottom: 26px;
-
-    font-size: clamp(70px, 10vw, 125px);
-
-    line-height: 0.86;
-
-    letter-spacing: -8px;
+margin-bottom: 26px;
+font-size: clamp(70px, 10vw, 125px);
+line-height: 0.86;
+letter-spacing: -8px;
 }
-
 .project-description {
-    max-width: 620px;
-
-    color: #c0c0c5;
-
-    font-size: 19px;
-    line-height: 1.65;
+max-width: 620px;
+color: #c0c0c5;
+font-size: 19px;
+line-height: 1.65;
 }
-
 .tags {
-    margin-top: 25px;
+margin-top: 25px;
 }
-
 .tag {
-    display: inline-block;
-
-    margin: 0 6px 7px 0;
-
-    padding: 8px 13px;
-
-    border: 1px solid rgba(255,255,255,0.16);
-
-    border-radius: 100px;
-
-    color: #c8c8cc;
-
-    font-size: 11px;
+display: inline-block;
+margin: 0 6px 7px 0;
+padding: 8px 13px;
+border: 1px solid rgba(255,255,255,0.16);
+border-radius: 100px;
+color: #c8c8cc;
+font-size: 11px;
 }
-
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-
-    margin-top: 30px;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 9px;
+margin-top: 30px;
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
 }
-
 .project-link span {
-    transition: transform 0.3s ease;
+transition: transform 0.3s ease;
 }
-
 .project-link:hover span {
-    transform: translateX(6px);
+transform: translateX(6px);
 }
-
-
-/* =========================
-   CASE STUDIES
-========================= */
-
 .project-detail {
-    padding: 150px 6%;
-
-    border-top: 1px solid #171719;
-
-    scroll-margin-top: 70px;
+padding: 150px 6%;
+border-top: 1px solid #171719;
+scroll-margin-top: 70px;
 }
-
 .detail-inner {
-    max-width: 1280px;
-    margin: auto;
+max-width: 1280px;
+margin: auto;
 }
-
 .detail-heading {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 80px;
-
-    margin-bottom: 85px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+margin-bottom: 85px;
 }
-
 .detail-heading h2 {
-    font-size: clamp(65px, 9vw, 125px);
-
-    line-height: 0.86;
-
-    letter-spacing: -8px;
+font-size: clamp(65px, 9vw, 125px);
+line-height: 0.86;
+letter-spacing: -8px;
 }
-
 .detail-intro {
-    align-self: end;
-
-    color: #99999f;
-
-    font-size: 19px;
-    line-height: 1.75;
+align-self: end;
+color: #99999f;
+font-size: 19px;
+line-height: 1.75;
 }
-
 .detail-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 14px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
 }
-
 .detail-card {
-    min-height: 250px;
-
-    padding: 32px;
-
-    border: 1px solid #1d1d20;
-
-    border-radius: 26px;
-
-    background: #0e0e10;
+min-height: 250px;
+padding: 32px;
+border: 1px solid #1d1d20;
+border-radius: 26px;
+background: #0e0e10;
 }
-
 .detail-number {
-    margin-bottom: 38px;
-
-    color: #55555b;
-
-    font-size: 11px;
+margin-bottom: 38px;
+color: #55555b;
+font-size: 11px;
 }
-
 .detail-card h4 {
-    margin-bottom: 14px;
-
-    font-size: 18px;
+margin-bottom: 14px;
+font-size: 18px;
 }
-
 .detail-card p {
-    color: #85858b;
-
-    font-size: 15px;
-    line-height: 1.7;
+color: #85858b;
+font-size: 15px;
+line-height: 1.7;
 }
-
-
-/* =========================
-   SCREENSHOT AREA
-========================= */
-
 .screenshot-area {
-    min-height: 600px;
-
-    margin-top: 20px;
-
-    padding: 60px;
-
-    border-radius: 35px;
-
-    border: 1px solid #1c1c1f;
-
-    background:
-        radial-gradient(
-            circle at 50% 35%,
-            #18181b,
-            #090909 70%
-        );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
+margin-top: 20px;
+padding: 48px 24px;
+border-radius: 35px;
+border: 1px solid #1c1c1f;
+background:
+radial-gradient(
+circle at 50% 35%,
+#18181b,
+#090909 70%
+);
+display: flex;
+flex-direction: column;
+gap: 28px;
+justify-content: center;
+align-items: center;
+text-align: center;
 }
-
-.screenshot-placeholder {
-    max-width: 550px;
-}
-
-.screenshot-placeholder span {
-    display: block;
-
-    margin-bottom: 20px;
-
-    color: #55555b;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-.screenshot-placeholder h3 {
-    margin-bottom: 15px;
-
-    font-size: 35px;
-
-    letter-spacing: -1.5px;
-}
-
-.screenshot-placeholder p {
-    color: #74747a;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
 .about {
-    padding: 180px 6%;
-
-    border-top: 1px solid #151517;
+padding: 180px 6%;
+border-top: 1px solid #151517;
 }
-
 .about-container {
-    max-width: 1200px;
+max-width: 1200px;
 }
-
 .about-heading {
-    max-width: 1000px;
-
-    margin-bottom: 75px;
-
-    font-size: clamp(55px, 8vw, 100px);
-
-    line-height: 0.95;
-
-    letter-spacing: -6px;
+max-width: 1000px;
+margin-bottom: 75px;
+font-size: clamp(55px, 8vw, 100px);
+line-height: 0.95;
+letter-spacing: -6px;
 }
-
 .about-layout {
-    display: grid;
-
-    grid-template-columns: 0.7fr 1.3fr;
-
-    gap: 100px;
+display: grid;
+grid-template-columns: 0.7fr 1.3fr;
+gap: 100px;
 }
-
 .about-side {
-    color: #65656b;
-
-    font-size: 13px;
-    line-height: 1.7;
+color: #65656b;
+font-size: 13px;
+line-height: 1.7;
 }
-
 .about-story {
-    max-width: 800px;
+max-width: 800px;
 }
-
 .about-story p {
-    margin-bottom: 27px;
-
-    color: #a0a0a6;
-
-    font-size: 19px;
-    line-height: 1.8;
+margin-bottom: 27px;
+color: #a0a0a6;
+font-size: 19px;
+line-height: 1.8;
 }
-
 .about-story .opening {
-    color: #f2f2f4;
-
-    font-size: 26px;
-    line-height: 1.55;
-
-    letter-spacing: -0.5px;
+color: #f2f2f4;
+font-size: 26px;
+line-height: 1.55;
+letter-spacing: -0.5px;
 }
-
-
-/* =========================
-   JOURNEY
-========================= */
-
 .journey {
-    margin-top: 100px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid #1b1b1e;
+margin-top: 100px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+border-top: 1px solid #1b1b1e;
 }
-
 .journey-item {
-    padding: 35px 30px 35px 0;
-
-    border-right: 1px solid #1b1b1e;
+padding: 35px 30px 35px 0;
+border-right: 1px solid #1b1b1e;
 }
-
 .journey-item:last-child {
-    border-right: none;
-    padding-left: 30px;
+border-right: none;
+padding-left: 30px;
 }
-
 .journey-item:nth-child(2) {
-    padding-left: 30px;
+padding-left: 30px;
 }
-
 .journey-year {
-    display: block;
-
-    margin-bottom: 20px;
-
-    color: #57575d;
-
-    font-size: 11px;
-
-    letter-spacing: 1.5px;
+display: block;
+margin-bottom: 20px;
+color: #57575d;
+font-size: 11px;
+letter-spacing: 1.5px;
 }
-
 .journey-item h4 {
-    margin-bottom: 12px;
-
-    font-size: 18px;
+margin-bottom: 12px;
+font-size: 18px;
 }
-
 .journey-item p {
-    max-width: 320px;
-
-    color: #77777d;
-
-    font-size: 14px;
-    line-height: 1.7;
+max-width: 320px;
+color: #77777d;
+font-size: 14px;
+line-height: 1.7;
 }
-
-
-/* =========================
-   SKILLS
-========================= */
-
 .skills {
-    padding: 130px 6% 180px;
+padding: 130px 6% 180px;
 }
-
 .skills-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 13px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 13px;
 }
-
 .skill {
-    padding: 32px;
-
-    border-radius: 22px;
-
-    border: 1px solid #1d1d20;
-
-    background: #0e0e10;
-
-    font-size: 17px;
-
-    transition: 0.3s ease;
+padding: 32px;
+border-radius: 22px;
+border: 1px solid #1d1d20;
+background: #0e0e10;
+font-size: 17px;
+transition: 0.3s ease;
 }
-
 .skill:hover {
-    transform: translateY(-4px);
-    background: #141416;
+transform: translateY(-4px);
+background: #141416;
 }
-
-
-/* =========================
-   CONTACT
-========================= */
-
 .contact {
-    min-height: 80vh;
-
-    padding: 130px 6%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    border-top: 1px solid #151517;
+min-height: 80vh;
+padding: 130px 6%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-top: 1px solid #151517;
 }
-
 .contact-inner {
-    max-width: 1000px;
+max-width: 1000px;
 }
-
 .contact h2 {
-    font-size: clamp(60px, 9vw, 125px);
-
-    line-height: 0.88;
-
-    letter-spacing: -8px;
+font-size: clamp(60px, 9vw, 125px);
+line-height: 0.88;
+letter-spacing: -8px;
 }
-
 .contact p {
-    max-width: 650px;
-
-    margin: 32px auto 42px;
-
-    color: #88888e;
-
-    font-size: 18px;
-    line-height: 1.7;
+max-width: 650px;
+margin: 32px auto 42px;
+color: #88888e;
+font-size: 18px;
+line-height: 1.7;
 }
-
 .contact-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 11px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 11px;
 }
-
 .contact-links a {
-    padding: 14px 23px;
-
-    border: 1px solid #29292d;
-
-    border-radius: 100px;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition: 0.3s ease;
+padding: 14px 23px;
+border: 1px solid #29292d;
+border-radius: 100px;
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+transition: 0.3s ease;
 }
-
 .contact-links a:hover {
-    background: #ffffff;
-    color: #000000;
+background: #ffffff;
+color: #000000;
 }
-
-
-/* =========================
-   FOOTER
-========================= */
-
 footer {
-    padding: 35px 6%;
-
-    display: flex;
-    justify-content: space-between;
-
-    border-top: 1px solid #151517;
-
-    color: #55555b;
-
-    font-size: 11px;
+padding: 35px 6%;
+display: flex;
+justify-content: space-between;
+border-top: 1px solid #151517;
+color: #55555b;
+font-size: 11px;
 }
-
-
-/* =========================
-   REVEAL ANIMATION
-========================= */
-
 .reveal {
-    opacity: 0;
-    transform: translateY(35px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+opacity: 0;
+transform: translateY(35px);
+transition:
+opacity 0.8s ease,
+transform 0.8s ease;
 }
-
 .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+opacity: 1;
+transform: translateY(0);
 }
-
-
-/* =========================
-   MOBILE
-========================= */
-
+.project-gallery {
+display: flex;
+justify-content: center;
+align-items: start;
+gap: 28px;
+width: 100%;
+flex-wrap: wrap;
+}
+.project-gallery figure {
+margin: 0;
+max-width: 300px;
+width: calc(50% - 14px);
+}
+.project-gallery figure.web-preview {
+width: 100%;
+max-width: 960px;
+}
+.preview-button {
+display: block;
+padding: 0;
+border: 1px solid #343439;
+border-radius: 28px;
+overflow: hidden;
+background: #000;
+width: 100%;
+cursor: zoom-in;
+}
+.preview-button img {
+display: block;
+width: 100%;
+height: auto;
+}
+.preview-button:focus-visible,
+.image-close:focus-visible {
+outline: 3px solid #d6b9ff;
+outline-offset: 6px;
+}
+.project-gallery figcaption {
+font-size: 14px;
+color: #aaaab3;
+margin-top: 18px;
+line-height: 1.6;
+}
+.gallery-hint {
+color: #888891;
+font-size: 13px;
+}
+.project-thumb {
+display: block;
+height: 300px;
+width: auto;
+max-width: 100%;
+object-fit: contain;
+align-self: center;
+margin: 24px auto;
+border: 1px solid #444;
+border-radius: 20px;
+}
+.project-thumb.wide {
+width: 100%;
+height: auto;
+max-height: 300px;
+}
+.image-viewer {
+max-width: 96vw;
+max-height: 96vh;
+border: 1px solid #444;
+border-radius: 18px;
+background: #090909;
+color: #fff;
+padding: 48px 16px 16px;
+margin: auto;
+}
+.image-viewer::backdrop {
+background: rgba(0,0,0,.9);
+}
+.image-viewer img {
+display: block;
+max-width: 90vw;
+max-height: 80vh;
+object-fit: contain;
+margin: auto;
+}
+.image-close {
+position: absolute;
+top: 10px;
+right: 12px;
+background: #29292c;
+color: #fff;
+border: 0;
+border-radius: 20px;
+padding: 8px 16px;
+cursor: pointer;
+}
+.viame-gallery {
+display: grid;
+grid-template-columns: repeat(3,minmax(0,1fr));
+gap: 32px 24px;
+align-items: start;
+}
+.viame-gallery figure {
+width: 100%;
+max-width: 300px;
+justify-self: center;
+}
 @media (max-width: 850px) {
-
-    nav {
-        padding: 18px 5%;
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .hero h1,
-    .project h3,
-    .detail-heading h2,
-    .contact h2 {
-        letter-spacing: -4px;
-    }
-
-    .section {
-        padding: 100px 5%;
-    }
-
-    .project {
-        min-height: 600px;
-        padding: 35px;
-        border-radius: 30px;
-    }
-
-    .detail-heading {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .detail-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .journey {
-        grid-template-columns: 1fr;
-    }
-
-    .journey-item,
-    .journey-item:nth-child(2),
-    .journey-item:last-child {
-        padding: 30px 0;
-        border-right: none;
-        border-bottom: 1px solid #1b1b1e;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
+nav {
+padding: 18px 5%;
 }
-
+.nav-links {
+gap: 16px;
+}
+.hero h1,
+.project h3,
+.detail-heading h2,
+.contact h2 {
+letter-spacing: -4px;
+}
+.section {
+padding: 100px 5%;
+}
+.project {
+min-height: 600px;
+padding: 35px;
+border-radius: 30px;
+}
+.detail-heading {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+.detail-grid {
+grid-template-columns: 1fr;
+}
+.about-layout {
+grid-template-columns: 1fr;
+gap: 35px;
+}
+.journey {
+grid-template-columns: 1fr;
+}
+.journey-item,
+.journey-item:nth-child(2),
+.journey-item:last-child {
+padding: 30px 0;
+border-right: none;
+border-bottom: 1px solid #1b1b1e;
+}
+.skills-grid {
+grid-template-columns: 1fr;
+}
+footer {
+flex-direction: column;
+gap: 10px;
+}
+}
+@media (max-width: 800px) {
+.viame-gallery {
+grid-template-columns: repeat(2,minmax(0,1fr));
+gap: 28px 16px;
+}
+}
+@media (max-width: 600px) {
+.screenshot-area {
+padding: 28px 14px;
+}
+.project-gallery {
+gap: 14px;
+}
+.project-gallery figure {
+width: calc(50% - 7px);
+}
+.viame-gallery figure {
+width: 100%;
+}
+.preview-button {
+border-radius: 14px;
+}
+.project-thumb {
+height: 240px;
+}
+}
 @media (max-width: 560px) {
-
-    .nav-links a:nth-child(2),
-    .nav-links a:nth-child(3) {
-        display: none;
-    }
-
-    .hero-description,
-    .project-description {
-        font-size: 17px;
-    }
-
-    .screenshot-area {
-        padding: 35px 25px;
-        min-height: 450px;
-    }
-
+.nav-links a:nth-child(2),
+.nav-links a:nth-child(3) {
+display: none;
 }
-
-
-/* Accessibility */
-
+.hero-description,
+.project-description {
+font-size: 17px;
+}
+}
+@media (max-width: 420px) {
+.viame-gallery {
+grid-template-columns: 1fr;
+}
+.viame-gallery figure {
+max-width: 270px;
+}
+}
 @media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
+html {
+scroll-behavior: auto;
 }
-
+.reveal {
+opacity: 1;
+transform: none;
+transition: none;
+}
+}
 </style>
 </head>
-
-
 <body>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <nav>
-
-    <div class="logo">
-        SARA CHARID
-    </div>
-
-    <div class="nav-links">
-
-        <a href="#work">Work</a>
-
-        <a href="#about">About</a>
-
-        <a href="#skills">Skills</a>
-
-        <a href="#contact">Contact</a>
-
-    </div>
-
+<div class="logo">SARA CHARID</div>
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
-
-    <div class="hero-glow"></div>
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            Aspiring Software & iOS Developer • London
-        </div>
-
-        <h1>
-
-            Ideas into
-
-            <br>
-
-            <span class="gradient-text">
-                experiences.
-            </span>
-
-        </h1>
-
-        <p class="hero-description">
-
-            I'm Sara, a developer with a background in mental
-            health nursing and a long-standing curiosity for
-            technology. I'm now turning that curiosity into
-            products — designing, coding and building
-            experiences across iOS and the web.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a
-                class="button button-primary"
-                href="#work">
-
-                Explore my work ↓
-
-            </a>
-
-            <a
-                class="button button-secondary"
-                href="#about">
-
-                My story
-
-            </a>
-
-        </div>
-
-    </div>
-
+<div class="hero-glow"></div>
+<div class="hero-content">
+<div class="eyebrow">
+Aspiring Software & iOS Developer • London
+</div>
+<h1>
+Ideas into
+<br>
+<span class="gradient-text">experiences.</span>
+</h1>
+<p class="hero-description">
+I'm Sara, a developer with a background in mental
+health nursing and a long-standing curiosity for
+technology. I'm now turning that curiosity into
+products — designing, coding and building
+experiences across iOS and the web.
+</p>
+<div class="hero-buttons">
+<a class="button button-primary" href="#work">
+Explore my work ↓
+</a>
+<a class="button button-secondary" href="#about">
+My story
+</a>
+</div>
+</div>
 </section>
 
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section
-    class="section"
-    id="work">
-
-    <div class="section-label reveal">
-        Selected Work
-    </div>
-
-    <h2 class="section-title reveal">
-
-        Learning by building.
-
-    </h2>
-
-
-    <!-- VIAME -->
-
-    <article class="project viame reveal">
-
-        <div class="project-top">
-
-            <span class="project-number">
-                01 / SOCIAL
-            </span>
-
-            <span class="project-status">
-                IN DEVELOPMENT
-            </span>
-
-        </div>
-
-        <div class="project-content">
-
-            <h3>
-                VIAME
-            </h3>
-
-            <p class="project-description">
-
-                A social media app focused on expression,
-                connection and giving people more control
-                over how their digital identity looks and
-                feels.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">iOS</span>
-
-                <span class="tag">SwiftUI</span>
-
-                <span class="tag">Social</span>
-
-                <span class="tag">UI / UX</span>
-
-            </div>
-
-            <a
-                class="project-link"
-                href="#viame-project">
-
-                Explore project <span>→</span>
-
-            </a>
-
-        </div>
-
-    </article>
-
-
-    <!-- ERA -->
-
-    <article class="project era reveal">
-
-        <div class="project-top">
-
-            <span class="project-number">
-                02 / PHOTOGRAPHY
-            </span>
-
-            <span class="project-status">
-                iOS PROJECT
-            </span>
-
-        </div>
-
-        <div class="project-content">
-
-            <h3>
-                ERA
-            </h3>
-
-            <p class="project-description">
-
-                A native iOS photography app exploring
-                era-inspired filters and the way software
-                can transform the character of a photograph.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Swift</span>
-
-                <span class="tag">SwiftUI</span>
-
-                <span class="tag">Core Image</span>
-
-                <span class="tag">PhotosUI</span>
-
-            </div>
-
-            <a
-                class="project-link"
-                href="#era-project">
-
-                Explore project <span>→</span>
-
-            </a>
-
-        </div>
-
-    </article>
-
-
-    <!-- LUNARA -->
-
-    <article class="project lunara reveal">
-
-        <div class="project-top">
-
-            <span class="project-number">
-                03 / MUSIC
-            </span>
-
-            <span class="project-status">
-                PRODUCT CONCEPT
-            </span>
-
-        </div>
-
-        <div class="project-content">
-
-            <h3>
-                LUNARA
-            </h3>
-
-            <p class="project-description">
-
-                A social music discovery concept exploring
-                how people can discover music through the
-                playlists and listening habits of others.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Product Design</span>
-
-                <span class="tag">UI / UX</span>
-
-                <span class="tag">JavaScript</span>
-
-                <span class="tag">Prototype</span>
-
-            </div>
-
-            <a
-                class="project-link"
-                href="#lunara-project">
-
-                Explore project <span>→</span>
-
-            </a>
-
-        </div>
-
-    </article>
-
+<section class="section" id="work">
+<div class="section-label reveal">Selected Work</div>
+<h2 class="section-title reveal">Learning by building.</h2>
+
+<article class="project viame reveal">
+<div class="project-top">
+<span class="project-number">01 / SOCIAL</span>
+<span class="project-status">IN DEVELOPMENT</span>
+</div>
+<img class="project-thumb"
+src="images/project-1.webp"
+alt="VIAME personal profile with custom header and profile photo"
+loading="lazy">
+<div class="project-content">
+<h3>VIAME</h3>
+<p class="project-description">
+A social media app focused on expression,
+connection and giving people more control
+over how their digital identity looks and
+feels.
+</p>
+<div class="tags">
+<span class="tag">iOS</span>
+<span class="tag">SwiftUI</span>
+<span class="tag">Social</span>
+<span class="tag">UI / UX</span>
+</div>
+<a class="project-link" href="#viame-project">
+Explore project <span>→</span>
+</a>
+</div>
+</article>
+
+<article class="project era reveal">
+<div class="project-top">
+<span class="project-number">02 / PHOTOGRAPHY</span>
+<span class="project-status">iOS PROJECT</span>
+</div>
+<img class="project-thumb"
+src="images/project-2.webp"
+alt="ERA interface preview"
+loading="lazy">
+<div class="project-content">
+<h3>ERA</h3>
+<p class="project-description">
+A native iOS photography app exploring
+era-inspired filters and the way software
+can transform the character of a photograph.
+</p>
+<div class="tags">
+<span class="tag">Swift</span>
+<span class="tag">SwiftUI</span>
+<span class="tag">Core Image</span>
+<span class="tag">PhotosUI</span>
+</div>
+<a class="project-link" href="#era-project">
+Explore project <span>→</span>
+</a>
+</div>
+</article>
+
+<article class="project lunara reveal">
+<div class="project-top">
+<span class="project-number">03 / MUSIC</span>
+<span class="project-status">PRODUCT CONCEPT</span>
+</div>
+<img class="project-thumb wide"
+src="images/project-3.webp"
+alt="LUNARA interface preview"
+loading="lazy">
+<div class="project-content">
+<h3>LUNARA</h3>
+<p class="project-description">
+A social music discovery concept exploring
+how people can discover music through the
+playlists and listening habits of others.
+</p>
+<div class="tags">
+<span class="tag">Product Design</span>
+<span class="tag">UI / UX</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Prototype</span>
+</div>
+<a class="project-link" href="#lunara-project">
+Explore project <span>→</span>
+</a>
+</div>
+</article>
 </section>
 
+<section class="project-detail" id="viame-project">
+<div class="detail-inner">
+<div class="section-label reveal">Project 01</div>
+<div class="detail-heading">
+<h2 class="reveal">VIAME</h2>
+<p class="detail-intro reveal">
+VIAME is a social media project centred
+around personal expression. I'm exploring
+how profiles can feel more individual while
+still making social interaction intuitive
+and familiar.
+</p>
+</div>
+<div class="detail-grid">
+<div class="detail-card reveal">
+<div class="detail-number">01</div>
+<h4>The idea</h4>
+<p>
+Create a social experience where users
+can connect, post and express themselves
+while having more control over the
+personality of their profile.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">02</div>
+<h4>The experience</h4>
+<p>
+The project explores social profiles,
+mini-blog posts, moods, activity,
+custom themes and personalised profile
+and header imagery.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">03</div>
+<h4>What I'm learning</h4>
+<p>
+VIAME is teaching me how to think beyond
+individual screens and consider how
+features, navigation and interactions
+work together across a larger product.
+</p>
+</div>
+</div>
 
-<!-- =========================
-     VIAME CASE STUDY
-========================= -->
+<div class="screenshot-area reveal">
+<div class="project-gallery viame-gallery">
 
-<section
-    class="project-detail"
-    id="viame-project">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Welcome and sign in">
+<img src="images/project-4.webp"
+alt="VIAME — Welcome and sign in"
+loading="lazy" decoding="async">
+</button>
+<figcaption>Welcome and sign in</figcaption>
+</figure>
 
-    <div class="detail-inner">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Create an account">
+<img src="images/project-5.webp"
+alt="VIAME — Create an account"
+loading="lazy" decoding="async">
+</button>
+<figcaption>Create an account</figcaption>
+</figure>
 
-        <div class="section-label reveal">
-            Project 01
-        </div>
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Personal profile, header photo and identity">
+<img src="images/project-1.webp"
+alt="VIAME — Personal profile, header photo and identity"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Personal profile, header photo and identity</figcaption>
+</figure>
 
-        <div class="detail-heading">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Photo wall and inner circle">
+<img src="images/project-6.webp"
+alt="VIAME — Photo wall and inner circle"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Photo wall and inner circle</figcaption>
+</figure>
 
-            <h2 class="reveal">
-                VIAME
-            </h2>
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Mini blog, visitor notes and profile visibility">
+<img src="images/project-7.webp"
+alt="VIAME — Mini blog, visitor notes and profile visibility"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Mini blog, visitor notes and profile visibility</figcaption>
+</figure>
 
-            <p class="detail-intro reveal">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Home feed — friend updates">
+<img src="images/project-8.webp"
+alt="VIAME — Home feed — friend updates"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Home feed — friend updates</figcaption>
+</figure>
 
-                VIAME is a social media project centred
-                around personal expression. I'm exploring
-                how profiles can feel more individual while
-                still making social interaction intuitive
-                and familiar.
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Discover — search for people">
+<img src="images/project-9.webp"
+alt="VIAME — Discover — search for people"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Discover — search for people</figcaption>
+</figure>
 
-            </p>
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Create a post — formatting and colours">
+<img src="images/project-10.webp"
+alt="VIAME — Create a post — formatting and colours"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Create a post — formatting and colours</figcaption>
+</figure>
 
-        </div>
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Choose a mood for your post">
+<img src="images/project-11.webp"
+alt="VIAME — Choose a mood for your post"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Choose a mood for your post</figcaption>
+</figure>
 
-        <div class="detail-grid">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge VIAME: Activity — notifications and friend requests">
+<img src="images/project-12.webp"
+alt="VIAME — Activity — notifications and friend requests"
+loading="lazy" decoding="async" width="827" height="1800">
+</button>
+<figcaption>Activity — notifications and friend requests</figcaption>
+</figure>
 
-            <div class="detail-card reveal">
-
-                <div class="detail-number">01</div>
-
-                <h4>The idea</h4>
-
-                <p>
-
-                    Create a social experience where users
-                    can connect, post and express themselves
-                    while having more control over the
-                    personality of their profile.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">02</div>
-
-                <h4>The experience</h4>
-
-                <p>
-
-                    The project explores social profiles,
-                    mini-blog posts, moods, activity,
-                    custom themes and personalised profile
-                    and header imagery.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">03</div>
-
-                <h4>What I'm learning</h4>
-
-                <p>
-
-                    VIAME is teaching me how to think beyond
-                    individual screens and consider how
-                    features, navigation and interactions
-                    work together across a larger product.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="screenshot-area reveal">
-
-            <div class="screenshot-placeholder">
-
-                <span>
-                    App showcase
-                </span>
-
-                <h3>
-                    VIAME screenshots coming next.
-                </h3>
-
-                <p>
-
-                    This area is ready for real screenshots
-                    from the app. They will be presented as
-                    a polished visual showcase rather than a
-                    simple image gallery.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+<p class="gallery-hint">Select a screenshot to enlarge.</p>
+</div>
+</div>
 </section>
 
+<section class="project-detail" id="era-project">
+<div class="detail-inner">
+<div class="section-label reveal">Project 02</div>
+<div class="detail-heading">
+<h2 class="reveal">ERA</h2>
+<p class="detail-intro reveal">
+ERA is a native iOS photography project
+exploring how modern photographs can be
+transformed through visual treatments
+inspired by different periods.
+</p>
+</div>
+<div class="detail-grid">
+<div class="detail-card reveal">
+<div class="detail-number">01</div>
+<h4>The idea</h4>
+<p>
+Give users a simple way to select a
+photograph, choose an era and experiment
+with a different visual identity for
+their image.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">02</div>
+<h4>Native development</h4>
+<p>
+Building ERA has allowed me to gain
+practical experience with Swift,
+SwiftUI, PhotosUI and Core Image.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">03</div>
+<h4>Experimentation</h4>
+<p>
+I'm exploring image filters, grain,
+overlays and processing techniques to
+understand how different effects can be
+combined into a convincing visual style.
+</p>
+</div>
+</div>
 
-<!-- =========================
-     ERA CASE STUDY
-========================= -->
+<div class="screenshot-area reveal">
+<div class="project-gallery">
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge ERA: Photo selection and era choices">
+<img src="images/project-13.webp"
+alt="ERA — Photo selection and era choices"
+loading="lazy" decoding="async">
+</button>
+<figcaption>Photo selection and era choices</figcaption>
+</figure>
 
-<section
-    class="project-detail"
-    id="era-project">
-
-    <div class="detail-inner">
-
-        <div class="section-label reveal">
-            Project 02
-        </div>
-
-        <div class="detail-heading">
-
-            <h2 class="reveal">
-                ERA
-            </h2>
-
-            <p class="detail-intro reveal">
-
-                ERA is a native iOS photography project
-                exploring how modern photographs can be
-                transformed through visual treatments
-                inspired by different periods.
-
-            </p>
-
-        </div>
-
-        <div class="detail-grid">
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">01</div>
-
-                <h4>The idea</h4>
-
-                <p>
-
-                    Give users a simple way to select a
-                    photograph, choose an era and experiment
-                    with a different visual identity for
-                    their image.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">02</div>
-
-                <h4>Native development</h4>
-
-                <p>
-
-                    Building ERA has allowed me to gain
-                    practical experience with Swift,
-                    SwiftUI, PhotosUI and Core Image.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">03</div>
-
-                <h4>Experimentation</h4>
-
-                <p>
-
-                    I'm exploring image filters, grain,
-                    overlays and processing techniques to
-                    understand how different effects can be
-                    combined into a convincing visual style.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="screenshot-area reveal">
-
-            <div class="screenshot-placeholder">
-
-                <span>
-                    App showcase
-                </span>
-
-                <h3>
-                    ERA screenshots coming next.
-                </h3>
-
-                <p>
-
-                    We'll use this space to show the actual
-                    interface, filter selection and photo
-                    editing experience.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<figure class="app-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge ERA: Photo editor and filter preview">
+<img src="images/project-2.webp"
+alt="ERA — Photo editor and filter preview"
+loading="lazy" decoding="async">
+</button>
+<figcaption>Photo editor and filter preview</figcaption>
+</figure>
+</div>
+<p class="gallery-hint">Select a screenshot to enlarge.</p>
+</div>
+</div>
 </section>
 
+<section class="project-detail" id="lunara-project">
+<div class="detail-inner">
+<div class="section-label reveal">Project 03</div>
+<div class="detail-heading">
+<h2 class="reveal">LUNARA</h2>
+<p class="detail-intro reveal">
+LUNARA explores a more human approach to
+music discovery — discovering what to listen
+to through people, personalities and
+playlists.
+</p>
+</div>
+<div class="detail-grid">
+<div class="detail-card reveal">
+<div class="detail-number">01</div>
+<h4>The idea</h4>
+<p>
+Users can create profiles and personal
+playlists that other people can explore,
+creating another way to discover music.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">02</div>
+<h4>Social discovery</h4>
+<p>
+The concept includes verified public
+profiles, allowing users to explore
+playlists and music shared by public
+figures they follow.
+</p>
+</div>
+<div class="detail-card reveal">
+<div class="detail-number">03</div>
+<h4>Product thinking</h4>
+<p>
+LUNARA has allowed me to explore
+prototyping, interface design and the
+broader thinking involved in turning an
+initial concept into a digital product.
+</p>
+</div>
+</div>
 
-<!-- =========================
-     LUNARA CASE STUDY
-========================= -->
-
-<section
-    class="project-detail"
-    id="lunara-project">
-
-    <div class="detail-inner">
-
-        <div class="section-label reveal">
-            Project 03
-        </div>
-
-        <div class="detail-heading">
-
-            <h2 class="reveal">
-                LUNARA
-            </h2>
-
-            <p class="detail-intro reveal">
-
-                LUNARA explores a more human approach to
-                music discovery — discovering what to listen
-                to through people, personalities and
-                playlists.
-
-            </p>
-
-        </div>
-
-        <div class="detail-grid">
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">01</div>
-
-                <h4>The idea</h4>
-
-                <p>
-
-                    Users can create profiles and personal
-                    playlists that other people can explore,
-                    creating another way to discover music.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">02</div>
-
-                <h4>Social discovery</h4>
-
-                <p>
-
-                    The concept includes verified public
-                    profiles, allowing users to explore
-                    playlists and music shared by public
-                    figures they follow.
-
-                </p>
-
-            </div>
-
-            <div class="detail-card reveal">
-
-                <div class="detail-number">03</div>
-
-                <h4>Product thinking</h4>
-
-                <p>
-
-                    LUNARA has allowed me to explore
-                    prototyping, interface design and the
-                    broader thinking involved in turning an
-                    initial concept into a digital product.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="screenshot-area reveal">
-
-            <div class="screenshot-placeholder">
-
-                <span>
-                    Product showcase
-                </span>
-
-                <h3>
-                    LUNARA visuals coming next.
-                </h3>
-
-                <p>
-
-                    This section will showcase the existing
-                    LUNARA interface and demonstrate the
-                    product concept visually.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="screenshot-area reveal">
+<div class="project-gallery">
+<figure class="web-preview">
+<button type="button" class="preview-button"
+aria-label="Enlarge LUNARA: Lunara music website">
+<img src="images/project-3.webp"
+alt="LUNARA — Lunara music website"
+loading="lazy" decoding="async">
+</button>
+<figcaption>Lunara music website</figcaption>
+</figure>
+</div>
+<p class="gallery-hint">Select a screenshot to enlarge.</p>
+<a class="project-link"
+href="https://svradoll.github.io/Lunara-Music-Webpage/"
+target="_blank" rel="noopener noreferrer">
+Try the live website <span>↗</span>
+</a>
+</div>
+</div>
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-    class="about"
-    id="about">
-
-    <div class="about-container">
-
-        <div class="section-label reveal">
-            My Story
-        </div>
-
-        <h2 class="about-heading reveal">
-
-            A long-standing curiosity,
-            <br>
-            now a career.
-
-        </h2>
-
-
-        <div class="about-layout">
-
-            <div class="about-side reveal">
-
-                FROM HEALTHCARE
-                <br>
-                TO TECHNOLOGY
-                <br><br>
-
-                LONDON, UK
-
-            </div>
-
-
-            <div class="about-story">
-
-                <p class="opening reveal">
-
-                    My route into software development
-                    hasn't been conventional — but my
-                    interest in technology started long
-                    before my career did.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    I began my professional career in mental
-                    health nursing, a field that taught me
-                    how to communicate with people from all
-                    walks of life, solve complex problems,
-                    remain calm under pressure and make
-                    thoughtful decisions when they matter.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    Technology, however, has always been
-                    something I've naturally gravitated
-                    towards. Growing up, I was curious about
-                    how the technology around me actually
-                    worked. I taught myself enough code to
-                    customise my Tumblr pages, experimented
-                    with modifying my PSP and spent hours
-                    installing and exploring mods for
-                    The Sims.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    At the time, I didn't think of those
-                    things as the beginning of a career in
-                    software. I simply enjoyed figuring
-                    things out, changing how things worked
-                    and seeing what I could create.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    As I progressed through my career, I
-                    began to realise that the direction I
-                    wanted for my future had changed. I
-                    found myself returning to something
-                    that had been present throughout my
-                    life — technology, creativity and the
-                    satisfaction of taking an idea and
-                    figuring out how to make it work.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    That realisation led me to begin
-                    teaching myself software development.
-                    Today I'm developing my skills in
-                    Swift, SwiftUI, Xcode and web
-                    technologies while building my own
-                    projects including VIAME, ERA and
-                    LUNARA.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    I'm still at the beginning of that
-                    journey, and every project gives me
-                    another opportunity to solve a problem
-                    I haven't encountered before,
-                    understand the technology more deeply
-                    and become a better developer.
-
-                </p>
-
-
-                <p class="reveal">
-
-                    My background has shaped the way I
-                    approach technology. I bring the
-                    curiosity that originally drew me to
-                    coding together with the empathy,
-                    resilience and human understanding I've
-                    developed throughout my professional
-                    career.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="journey reveal">
-
-            <div class="journey-item">
-
-                <span class="journey-year">
-                    THE FOUNDATION
-                </span>
-
-                <h4>
-                    Mental Health Nursing
-                </h4>
-
-                <p>
-
-                    Developing communication,
-                    decision-making, resilience and
-                    human-centred problem-solving.
-
-                </p>
-
-            </div>
-
-
-            <div class="journey-item">
-
-                <span class="journey-year">
-                    THE TRANSITION
-                </span>
-
-                <h4>
-                    Learning to Build
-                </h4>
-
-                <p>
-
-                    Returning to a long-standing interest in
-                    technology and teaching myself software
-                    development.
-
-                </p>
-
-            </div>
-
-
-            <div class="journey-item">
-
-                <span class="journey-year">
-                    NOW
-                </span>
-
-                <h4>
-                    Creating Products
-                </h4>
-
-                <p>
-
-                    Building real projects, developing my
-                    technical skills and working towards a
-                    career in software engineering.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="about" id="about">
+<div class="about-container">
+<div class="section-label reveal">My Story</div>
+<h2 class="about-heading reveal">
+A long-standing curiosity,
+<br>
+now a career.
+</h2>
+<div class="about-layout">
+<div class="about-side reveal">
+FROM HEALTHCARE
+<br>
+TO TECHNOLOGY
+<br><br>
+LONDON, UK
+</div>
+<div class="about-story">
+<p class="opening reveal">
+My route into software development
+hasn't been conventional — but my
+interest in technology started long
+before my career did.
+</p>
+<p class="reveal">
+I began my professional career in mental
+health nursing, a field that taught me
+how to communicate with people from all
+walks of life, solve complex problems,
+remain calm under pressure and make
+thoughtful decisions when they matter.
+</p>
+<p class="reveal">
+Technology, however, has always been
+something I've naturally gravitated
+towards. Growing up, I was curious about
+how the technology around me actually
+worked. I taught myself enough code to
+customise my Tumblr pages, experimented
+with modifying my PSP and spent hours
+installing and exploring mods for
+The Sims.
+</p>
+<p class="reveal">
+At the time, I didn't think of those
+things as the beginning of a career in
+software. I simply enjoyed figuring
+things out, changing how things worked
+and seeing what I could create.
+</p>
+<p class="reveal">
+As I progressed through my career, I
+began to realise that the direction I
+wanted for my future had changed. I
+found myself returning to something
+that had been present throughout my
+life — technology, creativity and the
+satisfaction of taking an idea and
+figuring out how to make it work.
+</p>
+<p class="reveal">
+That realisation led me to begin
+teaching myself software development.
+Today I'm developing my skills in
+Swift, SwiftUI, Xcode and web
+technologies while building my own
+projects including VIAME, ERA and
+LUNARA.
+</p>
+<p class="reveal">
+I'm still at the beginning of that
+journey, and every project gives me
+another opportunity to solve a problem
+I haven't encountered before,
+understand the technology more deeply
+and become a better developer.
+</p>
+<p class="reveal">
+My background has shaped the way I
+approach technology. I bring the
+curiosity that originally drew me to
+coding together with the empathy,
+resilience and human understanding I've
+developed throughout my professional
+career.
+</p>
+</div>
+</div>
+<div class="journey reveal">
+<div class="journey-item">
+<span class="journey-year">THE FOUNDATION</span>
+<h4>Mental Health Nursing</h4>
+<p>
+Developing communication,
+decision-making, resilience and
+human-centred problem-solving.
+</p>
+</div>
+<div class="journey-item">
+<span class="journey-year">THE TRANSITION</span>
+<h4>Learning to Build</h4>
+<p>
+Returning to a long-standing interest in
+technology and teaching myself software
+development.
+</p>
+</div>
+<div class="journey-item">
+<span class="journey-year">NOW</span>
+<h4>Creating Products</h4>
+<p>
+Building real projects, developing my
+technical skills and working towards a
+career in software engineering.
+</p>
+</div>
+</div>
+</div>
 </section>
 
-
-<!-- =========================
-     SKILLS
-========================= -->
-
-<section
-    class="skills"
-    id="skills">
-
-    <div class="section-label reveal">
-        Toolkit
-    </div>
-
-    <h2 class="section-title reveal">
-
-        What I'm learning
-        <br>
-        and building with.
-
-    </h2>
-
-
-    <div class="skills-grid">
-
-        <div class="skill reveal">
-            Swift
-        </div>
-
-        <div class="skill reveal">
-            SwiftUI
-        </div>
-
-        <div class="skill reveal">
-            Xcode
-        </div>
-
-        <div class="skill reveal">
-            Core Image
-        </div>
-
-        <div class="skill reveal">
-            PhotosUI
-        </div>
-
-        <div class="skill reveal">
-            Git & GitHub
-        </div>
-
-        <div class="skill reveal">
-            HTML
-        </div>
-
-        <div class="skill reveal">
-            CSS
-        </div>
-
-        <div class="skill reveal">
-            JavaScript
-        </div>
-
-    </div>
-
+<section class="skills" id="skills">
+<div class="section-label reveal">Toolkit</div>
+<h2 class="section-title reveal">
+What I'm learning
+<br>
+and building with.
+</h2>
+<div class="skills-grid">
+<div class="skill reveal">Swift</div>
+<div class="skill reveal">SwiftUI</div>
+<div class="skill reveal">Xcode</div>
+<div class="skill reveal">Core Image</div>
+<div class="skill reveal">PhotosUI</div>
+<div class="skill reveal">Git & GitHub</div>
+<div class="skill reveal">HTML</div>
+<div class="skill reveal">CSS</div>
+<div class="skill reveal">JavaScript</div>
+</div>
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    class="contact"
-    id="contact">
-
-    <div class="contact-inner">
-
-        <div class="section-label reveal">
-            What's Next?
-        </div>
-
-        <h2 class="reveal">
-
-            Let's create
-            <br>
-            something.
-
-        </h2>
-
-        <p class="reveal">
-
-            I'm continuing to develop my skills, build
-            products and explore opportunities where I can
-            learn from experienced developers and grow
-            within software engineering.
-
-        </p>
-
-        <div class="contact-links reveal">
-
-            <a
-                href="https://github.com/svradoll"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                GitHub ↗
-
-            </a>
-
-
-            <!-- LinkedIn link will be added next -->
-
-            <a href="#">
-
-                LinkedIn ↗
-
-            </a>
-
-
-            <!-- Email address will be added next -->
-
-            <a href="mailto:YOUR-EMAIL">
-
-                Email ↗
-
-            </a>
-
-        </div>
-
-    </div>
-
+<section class="contact" id="contact">
+<div class="contact-inner">
+<div class="section-label reveal">What's Next?</div>
+<h2 class="reveal">
+Let's create
+<br>
+something.
+</h2>
+<p class="reveal">
+I'm continuing to develop my skills, build
+products and explore opportunities where I can
+learn from experienced developers and grow
+within software engineering.
+</p>
+<div class="contact-links reveal">
+<a href="https://github.com/svradoll"
+target="_blank" rel="noopener noreferrer">
+GitHub ↗
+</a>
+<a href="https://www.linkedin.com/in/sara-c-216784295/"
+target="_blank" rel="noopener noreferrer">
+LinkedIn ↗
+</a>
+<a href="mailto:saracharid@hotmail.co.uk">Email ↗</a>
+</div>
+</div>
 </section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
-
-    <span>
-        © 2026 Sara Charid
-    </span>
-
-    <span>
-        Designed & built by Sara
-    </span>
-
+<span>© 2026 Sara Charid</span>
+<span>Designed & built by Sara</span>
 </footer>
 
+<dialog class="image-viewer" aria-label="Project screenshot">
+<button type="button" class="image-close">Close ✕</button>
+<img alt="">
+</dialog>
 
 <script>
+const revealElements = document.querySelectorAll(".reveal");
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer =
-    new IntersectionObserver(
-
-        function(entries) {
-
-            entries.forEach(
-                function(entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target
-                            .classList
-                            .add("visible");
-
-                    }
-
-                }
-            );
-
-        },
-
-        {
-            threshold: 0.10
-        }
-
-    );
-
-
-revealElements.forEach(
-    function(element) {
-
-        observer.observe(element);
-
-    }
+if ("IntersectionObserver" in window) {
+const observer = new IntersectionObserver(
+function(entries) {
+entries.forEach(function(entry) {
+if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+observer.unobserve(entry.target);
+}
+});
+},
+{ threshold: 0.10 }
 );
 
+revealElements.forEach(function(element) {
+observer.observe(element);
+});
+} else {
+revealElements.forEach(function(element) {
+element.classList.add("visible");
+});
+}
 
-/* =========================
-   SMOOTH INTERNAL LINKS
-========================= */
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+link.addEventListener("click", function(event) {
+const destination = this.getAttribute("href");
 
-document
-    .querySelectorAll('a[href^="#"]')
-    .forEach(
+if (!destination || destination === "#") {
+return;
+}
 
-        function(link) {
+const target = document.querySelector(destination);
 
-            link.addEventListener(
-                "click",
+if (target) {
+event.preventDefault();
+target.scrollIntoView({
+behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+? "auto"
+: "smooth",
+block: "start"
+});
+}
+});
+});
 
-                function(event) {
+const imageViewer = document.querySelector(".image-viewer");
+const enlargedImage = imageViewer.querySelector("img");
 
-                    const destination =
-                        this.getAttribute("href");
+document.querySelectorAll(".preview-button").forEach(function(button) {
+button.addEventListener("click", function() {
+const source = button.querySelector("img");
+enlargedImage.src = source.src;
+enlargedImage.alt = source.alt;
+imageViewer.showModal();
+});
+});
 
+imageViewer.querySelector(".image-close").addEventListener("click", function() {
+imageViewer.close();
+});
 
-                    if (
-                        !destination ||
-                        destination === "#"
-                    ) {
+imageViewer.addEventListener("click", function(event) {
+if (event.target === imageViewer) {
+const box = imageViewer.getBoundingClientRect();
 
-                        return;
-
-                    }
-
-
-                    const target =
-                        document.querySelector(
-                            destination
-                        );
-
-
-                    if (target) {
-
-                        event.preventDefault();
-
-                        target.scrollIntoView({
-
-                            behavior: "smooth",
-
-                            block: "start"
-
-                        });
-
-                    }
-
-                }
-
-            );
-
-        }
-
-    );
-
+if (
+event.clientX < box.left ||
+event.clientX > box.right ||
+event.clientY < box.top ||
+event.clientY > box.bottom
+) {
+imageViewer.close();
+}
+}
+});
 </script>
-
 </body>
 </html>
